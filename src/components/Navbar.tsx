@@ -30,7 +30,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
-            <a key={link} href={`#${link.toLowerCase().replaceAll(' ', '-')}`} className="nav-link">
+            <a key={link} href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="nav-link">
               {link}
             </a>
           ))}
